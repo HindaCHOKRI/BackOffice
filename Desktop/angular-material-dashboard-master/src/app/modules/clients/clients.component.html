@@ -1,0 +1,35 @@
+
+<div class="container">
+
+
+
+
+
+<h1>My Custom Table</h1>
+<hr>
+
+<div class="border">
+
+    <button class="btn btn-nd btn-outline-primary">
+        <i id="myicon" class="fa fa-user"></i>new User</button><br>
+  </div>
+
+
+<table id="users">
+  <tr>
+    <th *ngFor = "let column of headers">
+      {{column}}
+    </th>
+  </tr>
+  <tr *ngFor = "let row of rows">
+    <td *ngFor = "let column of headers">
+      {{row[column]}}
+    </td>
+  </tr>
+
+</table>
+
+</div>
+
+
+

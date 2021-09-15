@@ -1,0 +1,45 @@
+<article class="container container-fluid">
+  <section class="create" *ngIf="isCreate">
+    <h1>Add Offre</h1>
+    <form>
+      <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter your Name" [(ngModel)]="Name">
+      </div>
+      <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" id="Description" name="Description" placeholder="Enter your Description" [(ngModel)]="Description">
+      </div>
+      <app-upload (onUploadFinished)="uploadFinished($event)"></app-upload>
+      <div class="row">
+        <div class="offset-md-5 col-md-2">
+          <button type="button" class="btn btn-primary" (click)="onCreate()">ADD </button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section class="offres" *ngIf="!isCreate">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Image</th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let offre of offres">
+          <td><img [src]="createImage(offre.Image)" alt="Image Offre" style="width:60px; height:60px;"></td>
+          <td>{{offre.Name}}</td>
+          <td>{{offre.Description}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="offset-md-10 col-md-2">
+        <button type="button" class="btn btn-primary" (click)="returnToCreate()">New Offre</button>
+      </div>
+    </div>
+  </section>
+</article>

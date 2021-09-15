@@ -1,0 +1,19 @@
+<h1>My Custom Table</h1>
+<hr>
+
+<table id="users">
+  <tr>
+    <th *ngFor = "let column of headers">
+      {{column}}
+    </th>
+  </tr>
+
+  <tr *ngFor = "let row of rows">
+    <td *ngFor = "let column of headers">
+      {{row[column]}}
+    </td>
+  </tr>
+
+</table>
+<br>
+				<button type="button" class="btn btn-success btn-lg float-right">Ajouter Client</button>

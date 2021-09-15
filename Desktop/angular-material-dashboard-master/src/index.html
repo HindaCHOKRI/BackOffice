@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/evo-calendar.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/evo-calendar.orange-coral.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/evo-calendar.midnight-blue.min.css">
+  <!--  <link rel="stylesheet" type="text/css" href="./assets/css/evo-calendar.royal-navy.min.css">  -->
+
+    <!-- Add the evo-calendar.css for styling -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"/>
+<link rel="perconnect" href="https://fonts.gstatic.com">
+ <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+
+
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+
+ <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<app-root></app-root>
+<!-- js-->
+
+<!-- Add jQuery library (required) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="./assets/js/evo-calendar.min.js"></script>
+
+<!-- Add the evo-calendar.js for.. obviously, functionality! -->
+<script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script>
+
+  <script>
+        // Initialize evo-calendar in your script file or an inline <script> tag
+      $(document).ready(function() {
+          $('#calendar').evoCalendar({
+
+          theme: "Midnight Blue",
+     calendarEvents: [
+      {
+        id: 'event1', // Event's ID (required)
+        name: "New Year", // Event name (required)
+        date: "January/1/2020", // Event date (required)
+        description:"1123211534reflkjkfc:nsnerfk",
+        type: "holiday", // Event type (required)
+        everyYear: true // Same event every year (optional)
+      },
+      {
+        name: "Vacation Leave",
+        badge: "02/13 - 02/15", // Event badge (optional)
+        date: ["February/13/2020", "February/15/2020"], // Date range
+        description: "Vacation leave for 3 days.", // Event description (optional)
+        type: "event",
+        color: "#63d867" // Event custom color (optional)
+      }
+    ]
+
+          })
+      })
+
+  </script>
+</body>
+</html>
